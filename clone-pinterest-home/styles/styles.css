@@ -8,7 +8,7 @@
 *,
 button,
 input {
-  font-family: -apple-system, Ubuntu, 'Open Sans', Arial, sans-serif;
+  font-family: -apple-system, Ubuntu, Arial, sans-serif;
 }
 
 *, li {
@@ -23,8 +23,8 @@ input {
 }
 
 .animate-after {
-  -webkit-transform: translateY(-40);
-          transform: translateY(-40);
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
   opacity: 0;
   pointer-events: none;
 }
@@ -82,8 +82,8 @@ header nav .buttons {
 header nav .buttons button {
   font-size: 16px;
   font-weight: 700;
-  padding: 11px 12px;
   border-radius: 24px;
+  padding: 11px 16px;
   border: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,7 +107,7 @@ header nav .buttons .signup {
 }
 
 .heading {
-  margin-top: 120px;
+  margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,7 +133,7 @@ header nav .buttons .signup {
 .heading .wrapper .offset {
   position: absolute;
   top: 0;
-  left: 0px;
+  left: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -164,10 +164,20 @@ header nav .buttons .signup {
   display: grid;
   -ms-grid-columns: (252px)[7];
       grid-template-columns: repeat(7, 252px);
+  max-height: 0px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.grid.active {
+  max-height: unset;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .column {
   width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,47 +194,47 @@ header nav .buttons .signup {
 
 .column:nth-child(1) {
   margin-top: 0;
-  -webkit-transition-delay: 0;
-          transition-delay: 0;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
 .column:nth-child(2) {
   margin-top: 160px;
-  -webkit-transition-delay: 0.2;
-          transition-delay: 0.2;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 
 .column:nth-child(3) {
   margin-top: 320px;
-  -webkit-transition-delay: 0.4;
-          transition-delay: 0.4;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 
 .column:nth-child(4) {
-  margin-top: 480px;
-  -webkit-transition-delay: 0.6;
-          transition-delay: 0.6;
+  margin-top: 400px;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }
 
 .column:nth-child(5) {
   margin-top: 320px;
-  -webkit-transition-delay: 0.8;
-          transition-delay: 0.8;
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
 }
 
 .column:nth-child(6) {
   margin-top: 160px;
-  -webkit-transition-delay: 1;
-          transition-delay: 1;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
 }
 
 .column:nth-child(7) {
   margin-top: 0;
-  -webkit-transition-delay: 1.2;
-          transition-delay: 1.2;
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
 }
 
-.item {
+.item, img {
   width: 236px;
   height: 350px;
   background: #e60023;
