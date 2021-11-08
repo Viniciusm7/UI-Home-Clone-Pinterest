@@ -1,3 +1,12 @@
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+
 .grid {
     display: grid;
     grid-template-columns: repeat(7, 252px);
@@ -8,6 +17,28 @@ width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
+
+&:nth-child(1){
+    margin-top: 0;
+}
+&:nth-child(2){
+    margin-top: 160px;
+}
+&:nth-child(3){
+    margin-top: 320px;
+}
+&:nth-child(4){
+    margin-top: 480px;
+}
+&:nth-child(5){
+    margin-top: 320px;
+}
+&:nth-child(6){
+    margin-top: 160px;
+}
+&:nth-child(7){
+    margin-top: 0;
+}
 }
 
 .item {
@@ -17,6 +48,6 @@ align-items: center;
     border-radius: 10px;
 }
 
-.item:first-child {
-    margin-bottom: 10px;
+.item:not(first-child) {
+    margin-bottom: 16px;
 }

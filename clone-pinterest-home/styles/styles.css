@@ -8,11 +8,51 @@
 *,
 button,
 input {
-  font-family: -apple-system, Ubuntu, 'Open Sans','Arial', sans-serif;
+  font-family: -apple-system, Ubuntu, 'Open Sans', Arial, sans-serif;
 }
 
 *, li {
   list-style: none;
+}
+
+.heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heading .presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
 }
 
 .grid {
@@ -36,6 +76,34 @@ input {
           align-items: center;
 }
 
+.column:nth-child(1) {
+  margin-top: 0;
+}
+
+.column:nth-child(2) {
+  margin-top: 160px;
+}
+
+.column:nth-child(3) {
+  margin-top: 320px;
+}
+
+.column:nth-child(4) {
+  margin-top: 480px;
+}
+
+.column:nth-child(5) {
+  margin-top: 320px;
+}
+
+.column:nth-child(6) {
+  margin-top: 160px;
+}
+
+.column:nth-child(7) {
+  margin-top: 0;
+}
+
 .item {
   width: 236px;
   height: 350px;
@@ -43,7 +111,7 @@ input {
   border-radius: 10px;
 }
 
-.item:first-child {
-  margin-bottom: 10px;
+.item:not(first-child) {
+  margin-bottom: 16px;
 }
 /*# sourceMappingURL=styles.css.map */
